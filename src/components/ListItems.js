@@ -3,35 +3,22 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
 //import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) =>({
-  category: {
-    textAlign: 'center',
-    color: 'lightblue',
-  }
-}));
-
-export default function Category() {
-  const classes = useStyles();
-  return <h1 className={classes.category}>Category</h1>;
-}
+import ExtensionIcon from '@material-ui/icons/Extension';
+import BookIcon from '@material-ui/icons/Book';
+import GamepadIcon from '@material-ui/icons/Gamepad';
+import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
+import FlightIcon from '@material-ui/icons/Flight';
 
 export const mainListItems = (
   <div>
-    
-    <Category />
 
     <a href='/rpg'>
       <ListItem button>
         <ListItemIcon>
-            <DashboardIcon />
+            <GamepadIcon />
           </ListItemIcon>
         <ListItemText primary="RPG" />
       </ListItem>
@@ -39,7 +26,7 @@ export const mainListItems = (
     <a href='/adventure'>
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <BookIcon />
         </ListItemIcon>
         <ListItemText primary="アドベンチャー" />
       </ListItem>
@@ -47,7 +34,7 @@ export const mainListItems = (
     <a href='/action'>
       <ListItem button>
         <ListItemIcon>
-          <PeopleIcon />
+          <SportsKabaddiIcon />
         </ListItemIcon>
         <ListItemText primary="アクション" />
       </ListItem>
@@ -55,7 +42,7 @@ export const mainListItems = (
     <a href='/shooting'>
       <ListItem button>
         <ListItemIcon>
-          <BarChartIcon />
+          <FlightIcon />
         </ListItemIcon>
         <ListItemText primary="シューティング" />
       </ListItem>
@@ -63,7 +50,7 @@ export const mainListItems = (
     <a href='/puzzle'>
       <ListItem button>
         <ListItemIcon>
-          <BarChartIcon />
+          <ExtensionIcon />
         </ListItemIcon>
         <ListItemText primary="パズル" />
       </ListItem>
