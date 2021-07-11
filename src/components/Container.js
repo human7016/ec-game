@@ -26,6 +26,7 @@ import Category from './Category';
 //import Deposits from './Deposits';
 //import Orders from './Orders';
 import Games from './Games';
+import Test from './Test';
 
 const drawerWidth = 240;
 
@@ -171,12 +172,13 @@ export default function Dashboard(props) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-        <Games />
+          <Test />
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
                 {/*<Chart />*/}
+                {/* <Games /> */}
               </Paper>
             </Grid>
             {/* Recent Deposits */}

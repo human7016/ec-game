@@ -3,27 +3,30 @@ import "firebase/firestore";
 import {db, storage} from "../base";
 import Image from "./Image";
 import { SettingsSystemDaydreamSharp } from "@material-ui/icons";
-import {Button} from "@material-ui/core";
-
+import {Button} from "@material-ui/core"; 
 
 export default function Games(){
     const [images, setImages] = useState([]);
 
     async function docRef(){
         let querySnapshot = await db.collection("games").get()
+        let gameInfo = [];
         querySnapshot.forEach((doc) => {
-            images.push(
+            gameInfo.push(
                 <div key={doc.data().photo} className="column is-3">
                 <Image src={doc.data().photo} />
                 </div>
             )
         });
-        return images;
+        //onFulfilledのpromiseとgameInfo変数の値を返す(返り値がpromiseなのでこの後thenやcatchで処理する)
+        return gameInfo;
     }
 
     function fetchImages() {
-        docRef().then((images) => {
-            setImages(images);
+        docRef().then((gameInfo) => {
+            setImages(gameInfo);
+        }).catch(() => {
+            console.log("No such File");
         })
     }
 
@@ -34,35 +37,3 @@ export default function Games(){
         </div>
     )
 }
-
-
-    // const getData = async () => {
-    //     {/*try-catch構文:try(実行処理)catch(例外処理)*/}
-    //     try {
-    //         db.collection('games').get().then((response) => {
-    //             return (
-    //                 <div className="columns is-vcentered is-multiline">
-    //                 {
-    //                     response.map((url) => {
-    //                         return (
-    //                             <div key={url} className="column is-3">
-    //                             <Image src={url} />
-    //                             </div>
-    //                         );
-    //                     })
-    //                 }
-    //                 </div>
-    //             )
-    //         })
-    //     } catch (e) {
-    //         alert(e);
-    //     }
-    // }
-    
-    // return (
-    //     <div>
-    //         <button onClick={fetchGames}>
-    //             click me 
-    //         </button>
-    //     </div>
-    // );
