@@ -6,7 +6,7 @@ function Shooting(props) {
 
   return (
     <div>
-        <Container title={"シューティング"} />
+        <Container title={"シューティング"} category={"シューティング"}/>
         <main></main>
     </div>
   );

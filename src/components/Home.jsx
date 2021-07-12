@@ -6,7 +6,7 @@ function Home(props) {
 
   return (
     <div>
-        <Container title={"TOP"} />
+        <Container title={"TOP"} category={null}/>
         <main>
         </main>
     </div>

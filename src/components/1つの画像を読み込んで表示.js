@@ -8,6 +8,7 @@ export default function Games(){
 
   var docRef = db.collection("games").doc("1Cg3grPdahBGuAC2WKnY");
   const [game, setGame] = useState([]);
+  
   let gameArray = []
 
   useEffect(() => {

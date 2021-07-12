@@ -6,7 +6,7 @@ function Puzzle(props) {
 
   return (
     <div>
-        <Container title={"パズル"} />
+        <Container title={"パズル"} category={"パズル"} />
         <main>
         </main>
     </div>

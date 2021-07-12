@@ -136,7 +136,7 @@ export default function Dashboard(props) {
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             {props.title}
-            
+
           </Typography>
 
           {/* お知らせアイコン */}
@@ -172,7 +172,7 @@ export default function Dashboard(props) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Test />
+          <Test category={props.category}/>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>

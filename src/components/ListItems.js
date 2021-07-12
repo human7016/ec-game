@@ -18,8 +18,8 @@ export const mainListItems = (
     <a href='/rpg'>
       <ListItem button>
         <ListItemIcon>
-            <GamepadIcon />
-          </ListItemIcon>
+          <GamepadIcon />
+        </ListItemIcon>
         <ListItemText primary="RPG" />
       </ListItem>
     </a>

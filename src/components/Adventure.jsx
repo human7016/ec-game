@@ -8,7 +8,7 @@ function Adventure(props) {
     <div>
 
       {/*子コンポーネントContainerで変数titleを使う宣言*/}
-      <Container title={"アドベンチャー"} />
+      <Container title={"アドベンチャー"} category={"アドベンチャー"}/>
       <main>
 
       </main>

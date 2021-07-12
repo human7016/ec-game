@@ -6,7 +6,7 @@ function Rpg(props) {
 
   return (
     <div>
-        <Container title={"RPG"} />
+        <Container title={"RPG"} category={"RPG"}/>
         <main>
         </main>
     </div>

@@ -6,7 +6,7 @@ function Action(props) {
 
   return (
     <div>
-        <Container title={"アクション"} />
+        <Container title={"アクション"} category={"アクション"}/>
         <main>
 
         </main>
