@@ -12,6 +12,7 @@ import Shooting from "./components/Shooting";
 import Puzzle from "./components/Puzzle";
 import Login from "./auth/Login";
 import SignUp from "./auth/Signup";
+import BuySection from "./components/BuySection";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <PrivateRoute path='/action' component={Action} />
           <PrivateRoute path='/shooting' component={Shooting} />
           <PrivateRoute path='/puzzle' component={Puzzle} />
+          <PrivateRoute path='/buysection' component={BuySection} />
         </div>
       </Router>
     //</AuthProvider>
