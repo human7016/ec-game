@@ -119,6 +119,7 @@ export default function Dashboard(props) {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  console.log(props.gameDoc);
 
   return (
     <div className={classes.root}>
@@ -172,7 +173,7 @@ export default function Dashboard(props) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <GameInfo category={props.category}/>
+          <GameInfo category={props.category} gameDoc={props.gameDoc}/>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
